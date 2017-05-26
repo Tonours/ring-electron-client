@@ -28,7 +28,7 @@ module.exports = {
 
     devServer: {
         //content from here will be automatically served
-        contentBase: './app/public',
+        contentBase: './public',
         publicPath: 'http://localhost:8182/build/'
     },
     module: {
@@ -40,6 +40,13 @@ module.exports = {
             'style-loader',
             'css-loader',
             'sass-loader'
+          ]
+        },
+        {
+          test: /\.(jpg|jpeg|svg|png|gif)$/,
+          include: path.resolve(__dirname, "app/images"),
+          loaders: [
+            'url-loader?limit=10000&name=../build/img/[hash].[ext]'
           ]
         },
         {

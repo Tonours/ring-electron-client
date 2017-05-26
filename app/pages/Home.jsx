@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../components/Logo.jsx';
+import LogoImage from '../images/logo-ring-beta2-tagline-EN-couleur.svg';
 
 class Home extends React.Component {
   render() {
@@ -7,7 +8,7 @@ class Home extends React.Component {
       <div className="landing">
         <div className="App-inner">
           <Logo
-            logoPath='../public/images/logo-ring-beta2-tagline-EN-couleur.svg'
+            logoPath={LogoImage}
              width="350" />
           <h1 className="landing__title"> React electron ring client POC</h1>
         </div>

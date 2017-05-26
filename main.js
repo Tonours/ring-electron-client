@@ -1,4 +1,4 @@
-import electron from 'electron';
+const electron = require('electron');
 
 // Module to control application life.
 const app = electron.app;
@@ -20,8 +20,8 @@ function createWindow() {
   // the __dirname parameter in the bundled file. So to keep
   // things working both in regular electron usage AND webpack,
   // we have to go with process.cwd() instead of __dirname.
-  mainWindow.loadURL('file://' + process.cwd() + '/app/public/index.html');
-
+  // mainWindow.loadURL('file://' + process.cwd() + '/public/index.html');
+  mainWindow.loadURL(`file://${__dirname}/public/index.html`);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
